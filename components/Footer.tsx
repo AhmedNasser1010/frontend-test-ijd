@@ -31,11 +31,11 @@ export default function Footer(): React.ReactNode {
           </div>
           <div>
             <div className="text-white text-[20px] flex gap-2 w-[calc(100%-20px)] max-w-[700px] justify-evenly mr-5">
-              <Link href="/about">عن ميادين</Link>
-              <Link href="/services">الخدمات</Link>
-              <Link href="/competitions">المسابقات</Link>
-              <Link href="/live-stream">البث المباشر</Link>
-              <Link href="/contact">اتصل بنا</Link>
+              <Link href="/">عن ميادين</Link>
+              <Link href="/">الخدمات</Link>
+              <Link href="/">المسابقات</Link>
+              <Link href="/">البث المباشر</Link>
+              <Link href="/">اتصل بنا</Link>
             </div>
           </div>
         </div>
