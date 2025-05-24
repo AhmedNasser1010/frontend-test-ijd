@@ -1,3 +1,4 @@
+import CalendarSlider from '@/components/calender-slider/CalendarSlider';
 import Event from '@/components/Event';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,7 +10,7 @@ interface EventType {
   subTitle: string;
 }
 
-const dummyEvents: EventType[] = [
+export const dummyEvents: EventType[] = [
   {
     id: 'ev1',
     date: '20/3/2025',
@@ -38,16 +39,16 @@ const dummyEvents: EventType[] = [
 
 export default function Home() {
   return (
-    <main className="h-[calc(100vh-137px)] relative px-[140px]">
-      <Image
-        src="/home-page/main-img.svg"
-        alt="home background"
-        fill
-        aria-hidden
-        priority
-        className="object-cover z-[-1] bg-[#48371f] w-full"
-      />
-      <section>
+    <main>
+      <section className="h-[calc(100vh-137px)] relative px-[140px]">
+        <Image
+          src="/home-page/main-img.svg"
+          alt="home background"
+          fill
+          aria-hidden
+          priority
+          className="object-cover z-[-1] bg-[#48371f] w-full"
+        />
         <div className="text-white pt-[124px]">
           <h1 className="text-[72px] leading-[160px] mb-2">عنوان رئيسي</h1>
           <h2 className="text-[40px] leading-[89px] mb-8">
@@ -76,6 +77,14 @@ export default function Home() {
               subTitle={event.subTitle}
             />
           ))}
+        </div>
+      </section>
+      <section className="bg-white pt-[30px] pb-[110px] px-[140px]">
+        <h2 className="text-primary text-6xl leading-[136px] pb-[11px]">
+          رزنامة السباقات
+        </h2>
+        <div>
+          <CalendarSlider prevDays={5} endDate={[2027, 2, 1]} />
         </div>
       </section>
     </main>
