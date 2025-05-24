@@ -13,10 +13,20 @@
   --color-secondary: #ffbf00;
   --color-accent: #000000E6;
   --color-tertiary: #000E5A;
+  --color-muted: #E3E3E3;
+  --color-shadow: #00000029;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-al), sans-serif;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
