@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import DayEvent from './DayEvent';
 
 export interface EventTypes {

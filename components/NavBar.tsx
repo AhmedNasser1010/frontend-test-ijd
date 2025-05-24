@@ -64,7 +64,7 @@ export default function NavBar(): React.ReactNode {
         </div>
       </nav>
       {
-        active && <RegistrationDialog active={active} handleSetActive={handleSetActive} />
+        active && <RegistrationDialog handleSetActive={handleSetActive} />
       }
     </>
   );

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { IoClose } from "react-icons/io5";
 import { useState } from 'react';
 
-export default function RegistrationDialog({ active, handleSetActive }: { active: boolean; handleSetActive: (value: boolean) => void }): React.ReactNode {
+export default function RegistrationDialog({ handleSetActive }: { handleSetActive: (value: boolean) => void }): React.ReactNode {
   const [currentForm, setCurrentForm] = useState<'login' | 'signup'>('login')
   const [loginFormInformation, setLoginFormInformation] = useState({
     email: '',

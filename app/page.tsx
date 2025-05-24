@@ -12,7 +12,7 @@ interface EventType {
   subTitle: string;
 }
 
-export const dummyEvents: EventType[] = [
+const dummyEvents: EventType[] = [
   {
     id: 'ev1',
     date: '20/3/2025',
