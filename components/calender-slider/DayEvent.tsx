@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { IoCalendarOutline } from 'react-icons/io5';
 import { FaRegClock } from 'react-icons/fa6';
 import { timeToAm } from '@/utils/timeToAm';
+import ArrowButton from '../ArrowButton';
 
 type Props = {
   fullDate: Date;
@@ -129,6 +130,10 @@ export default function DayEvent({
                 {Number(event.prize).toLocaleString()} ر.س
               </span>
             </div>
+          </div>
+
+          <div className='absolute left-6 bottom-6 w-[110px]'>
+            <ArrowButton title="تفاصيل" />
           </div>
         </div>
       </div>

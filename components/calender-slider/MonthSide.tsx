@@ -29,7 +29,7 @@ export default function MonthSide({ visibleDays, containerRef }: Props): React.R
   return (
     <div className="w-[300px]">
       <div className="border-b-3 border-muted">
-        <h3 className="text-[36px] leading-[36px] pb-[53px]">
+        <h3 className="text-[36px] leading-[36px] h-[88px] block">
           {visibleDays[0]?.date?.toLocaleString('ar-EG', { month: 'long' })}
         </h3>
         <div className="flex items-center justify-between gap-[9px] pb-[27px] w-fit">

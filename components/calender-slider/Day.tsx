@@ -121,19 +121,17 @@ interface Props {
   dayNumber: string;
   dayName: string;
   fullDate: Date;
+  active: string;
+  handleActiveDialog: (eventId: string) => void
 }
 
 export default function Day({
   dayNumber,
   dayName,
   fullDate,
+  active,
+  handleActiveDialog
 }: Props): React.ReactNode {
-  const [active, setActive] = useState('');
-
-  const handleActiveDialog = (eventId: string) => {
-    setActive(eventId);
-  };
-
   const dayEvents = useMemo(
     () =>
       dummyEvents.filter((event) => {
@@ -149,7 +147,7 @@ export default function Day({
 
   return (
     <div className="border-muted border-1">
-      <div className="p-4 px-[47px] flex flex-col text-center border-b-3 border-muted">
+      <div className="p-4 px-[30px] flex flex-col text-center border-b-3 border-muted">
         <span
           className={`text-primary ${new Date().toDateString() === fullDate.toDateString() && 'text-secondary'} text-[57px]`}
         >
